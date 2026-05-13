@@ -11,7 +11,7 @@ A microservices-based distributed application built with Node.js, Docker and Azu
 - RabbitMQ messaging concepts
 
 ## Tech Stack
-Node.js, JavaScript, Docker, Docker Compose, Kong, Terraform, Azure, REST APIs, SQL
+HTML, CSS, JavaScript, Node.js, Docker, Docker Compose, Kong, Terraform, Azure, REST APIs, SQL
 
 ## Services
 - joke-service: serves and manages jokes via REST API
