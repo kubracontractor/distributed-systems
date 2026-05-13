@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: joke_service
+    ports:
+      - "3307:3306"
+
+  joke-service:
+    build: ./joke-service
+    container_name: joke-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+
+  etl-service:
+    build: ./etl-service
+    container_name: etl-app
+    depends_on:
+      - mysql

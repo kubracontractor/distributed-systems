@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  submit-service:
+    build: ./submit-service
+    container_name: submit-app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - rabbitmq

@@ -1,0 +1,26 @@
+_format_version: "3.0"
+
+services:
+
+- name: joke-service
+  url: http://172.16.0.4:3000
+  routes:
+  - name: joke-route
+    paths:
+      - /jokems
+    strip_path: true
+
+- name: submit-service
+  url: http://172.16.1.4:4000
+  routes:
+  - name: submit-route
+    paths:
+      - /submitms
+    strip_path: true
+
+plugins:
+- name: rate-limiting
+  route: joke-route
+  config:
+    minute: 5
+    policy: local

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Joke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Submit a Joke</h1>
+
+    <input type="text" id="setup" placeholder="Enter setup"><br><br>
+    <input type="text" id="punchline" placeholder="Enter punchline"><br><br>
+
+    <label>Select Existing Type:</label>
+    <select id="type">
+    </select>
+
+    <br><br>
+
+    <label>Or Enter New Type:</label>
+    <input type="text" id="newType" placeholder="Enter new type">
+
+
+    <br><br>
+    <button onclick="submitJoke()">Submit</button>
+
+    <p id="message"></p>
+
+    <script src="/submitmsscript.js"></script>
+</body>
+</html>
